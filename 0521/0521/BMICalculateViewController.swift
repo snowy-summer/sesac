@@ -11,6 +11,7 @@ final class BMICalculateViewController: UIViewController {
     
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var nicknameTextField: UITextField!
     
     @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var warringLabel: UILabel!
@@ -20,12 +21,19 @@ final class BMICalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTextField(nicknameTextField,
+                           borderWidth: 1,
+                           radius: 8,
+                           keyboard: .default)
         configureTextField(heightTextField,
                            borderWidth: 1,
-                           radius: 8)
+                           radius: 8,
+                           keyboard: .decimalPad)
         configureTextField(weightTextField,
                            borderWidth: 1,
-                           radius: 8)
+                           radius: 8,
+                           keyboard: .decimalPad)
+    
         configureResultButton(resultButton,
                         radius: 8)
         configureRandomButton()
@@ -80,7 +88,24 @@ final class BMICalculateViewController: UIViewController {
         let bmi = caculateBMI(height: height,
                               weight: weight)
         
+        if let nickname = nicknameTextField.text {
+            UserDefaults.standard.setValue(height, forKey: "\(nickname) 키")
+            UserDefaults.standard.setValue(weight, forKey: "\(nickname) 몸무게")
+        }
         showResultAlert(bmi: bmi)
+    }
+    
+    @IBAction func LoadInformation(_ sender: UIButton) {
+        guard let nickname = nicknameTextField.text else {
+            
+            return
+        }
+        let height = UserDefaults.standard.double(forKey: "\(nickname) 키")
+        let weight = UserDefaults.standard.double(forKey: "\(nickname) 몸무게")
+                   
+        heightTextField.text = "\(height)"
+        weightTextField.text = "\(weight)"
+                                                  
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -130,10 +155,11 @@ final class BMICalculateViewController: UIViewController {
     
     private func configureTextField(_ field: UITextField,
                                     borderWidth: CGFloat,
-                                    radius: CGFloat) {
+                                    radius: CGFloat,
+                                    keyboard: UIKeyboardType) {
         
         field.font = .systemFont(ofSize: 20)
-        field.keyboardType = .decimalPad
+        field.keyboardType = keyboard
         field.layer.borderWidth = borderWidth
         field.layer.cornerRadius = radius
     }

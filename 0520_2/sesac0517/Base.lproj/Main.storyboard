@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MDJ-O6-G3h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -25,7 +25,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime1"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epi-F2-QWi"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epi-F2-QWi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-HK-5o6">
@@ -36,7 +36,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime2"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mmh-e1-aOi"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mmh-e1-aOi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80a-RU-YQj">
@@ -47,7 +47,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime3"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RX1-sf-e45"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RX1-sf-e45"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-dY-MBS">
@@ -58,7 +58,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime4"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuF-G2-ZwU"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuF-G2-ZwU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEz-lg-GSp">
@@ -69,7 +69,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime5"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFQ-Wx-IyF"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFQ-Wx-IyF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwZ-ae-45a">
@@ -80,7 +80,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime6"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrX-Nu-dge"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrX-Nu-dge"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xw-oY-rLC">
@@ -91,7 +91,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime7"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZv-XZ-x3Q"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZv-XZ-x3Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4q-Iy-kwy">
@@ -102,7 +102,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime8"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EcH-Ez-2dU"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EcH-Ez-2dU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kd-eO-Ltd">
@@ -113,7 +113,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="slime9"/>
                                 <connections>
-                                    <action selector="slime01Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSW-WF-uQz"/>
+                                    <action selector="slimeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSW-WF-uQz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLQ-hU-bXl">
@@ -170,6 +170,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTW-Xh-NGd">
+                                <rect key="frame" x="125.5" y="497" width="69" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="초기화"/>
+                                <connections>
+                                    <action selector="resetCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="68S-Uq-2dG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,9 +194,11 @@
                             <constraint firstItem="PEz-lg-GSp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BbY-wF-HE4"/>
                             <constraint firstItem="uuV-dY-MBS" firstAttribute="top" secondItem="dLQ-hU-bXl" secondAttribute="bottom" constant="32" id="BhI-kQ-slr"/>
                             <constraint firstItem="CZi-Ei-Tbs" firstAttribute="trailing" secondItem="uuV-dY-MBS" secondAttribute="trailing" id="FlW-K6-PrJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NTW-Xh-NGd" secondAttribute="bottom" constant="36" id="G46-Ra-WSD"/>
                             <constraint firstItem="CZi-Ei-Tbs" firstAttribute="top" secondItem="uuV-dY-MBS" secondAttribute="bottom" id="GXj-aq-TUE"/>
                             <constraint firstItem="0bT-P9-haJ" firstAttribute="leading" secondItem="f9W-HK-5o6" secondAttribute="leading" id="IDs-sh-QE5"/>
                             <constraint firstItem="2Zx-Ya-GmJ" firstAttribute="trailing" secondItem="PEz-lg-GSp" secondAttribute="trailing" id="K5p-gi-Flz"/>
+                            <constraint firstItem="NTW-Xh-NGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQH-ri-pvs"/>
                             <constraint firstItem="mWZ-iZ-gQ1" firstAttribute="top" secondItem="80a-RU-YQj" secondAttribute="bottom" id="KWc-02-F0n"/>
                             <constraint firstItem="80a-RU-YQj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="Kuh-Cw-bJF"/>
                             <constraint firstItem="7xw-oY-rLC" firstAttribute="top" secondItem="CZi-Ei-Tbs" secondAttribute="bottom" constant="32" id="NQk-8A-nAs"/>

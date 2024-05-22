@@ -82,12 +82,32 @@
                                     <action selector="calculateRadomBMI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUf-0g-ouM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-l3-WHe">
+                                <rect key="frame" x="146" y="582" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="불러오기"/>
+                                <connections>
+                                    <action selector="LoadInformation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHR-jV-1jQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBO-UY-oF5">
+                                <rect key="frame" x="16" y="223" width="174.33333333333334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1A-Ci-IyH">
+                                <rect key="frame" x="16" y="194" width="174.33333333333334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Zxb-j4-WzY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0v5-3m-jK3"/>
+                            <constraint firstItem="X1A-Ci-IyH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Ad-Cz-tlD"/>
                             <constraint firstItem="14S-A5-U2z" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="2Wc-S6-rA2"/>
                             <constraint firstItem="Ta8-RR-twz" firstAttribute="top" secondItem="Zxb-j4-WzY" secondAttribute="bottom" constant="16" id="2c4-4b-WBa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ta8-RR-twz" secondAttribute="bottom" constant="16" id="34E-Zf-UyZ"/>
@@ -96,6 +116,7 @@
                             <constraint firstItem="TyZ-T5-2VK" firstAttribute="top" secondItem="vkl-4X-noK" secondAttribute="bottom" constant="8" id="7FS-6U-qhM"/>
                             <constraint firstItem="Zxb-j4-WzY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Bhp-e9-DPo"/>
                             <constraint firstItem="zFh-RY-jSY" firstAttribute="leading" secondItem="Gn5-hG-ndT" secondAttribute="leading" id="ESN-JF-hn9"/>
+                            <constraint firstItem="14S-A5-U2z" firstAttribute="leading" secondItem="X1A-Ci-IyH" secondAttribute="trailing" constant="16" id="Fpi-sV-IEi"/>
                             <constraint firstItem="zFh-RY-jSY" firstAttribute="top" secondItem="lwh-L2-eaU" secondAttribute="bottom" constant="32" id="HkR-t2-NBZ"/>
                             <constraint firstItem="7OR-bj-3Ya" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IDu-5n-Aqh"/>
                             <constraint firstItem="lwh-L2-eaU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lvw-Pr-hvj"/>
@@ -107,7 +128,10 @@
                             <constraint firstItem="lwh-L2-eaU" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="bfw-38-co8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TyZ-T5-2VK" secondAttribute="trailing" constant="16" id="cIJ-n3-wHF"/>
                             <constraint firstItem="7OR-bj-3Ya" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dYi-JK-Dd2"/>
+                            <constraint firstItem="14S-A5-U2z" firstAttribute="leading" secondItem="EBO-UY-oF5" secondAttribute="trailing" constant="16" id="dq5-u5-rME"/>
+                            <constraint firstItem="0wE-l3-WHe" firstAttribute="top" secondItem="vkl-4X-noK" secondAttribute="bottom" constant="54" id="eOK-ao-y1e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zFh-RY-jSY" secondAttribute="trailing" constant="16" id="fCi-Yl-qVQ"/>
+                            <constraint firstItem="EBO-UY-oF5" firstAttribute="top" secondItem="X1A-Ci-IyH" secondAttribute="bottom" constant="8" id="fyk-UX-QbN"/>
                             <constraint firstItem="9s2-Hv-ovo" firstAttribute="leading" secondItem="7OR-bj-3Ya" secondAttribute="leading" id="gMB-7T-AFN"/>
                             <constraint firstItem="vkl-4X-noK" firstAttribute="top" secondItem="zFh-RY-jSY" secondAttribute="bottom" constant="8" id="gYp-qE-Jzf"/>
                             <constraint firstItem="9s2-Hv-ovo" firstAttribute="top" secondItem="7OR-bj-3Ya" secondAttribute="bottom" constant="8" id="hBl-x8-6l7"/>
@@ -116,9 +140,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="14S-A5-U2z" secondAttribute="trailing" id="l0R-dw-NKg"/>
                             <constraint firstItem="Ta8-RR-twz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n3Z-Xe-7yl"/>
                             <constraint firstItem="vkl-4X-noK" firstAttribute="leading" secondItem="lwh-L2-eaU" secondAttribute="leading" id="nuW-Xt-cUy"/>
+                            <constraint firstItem="X1A-Ci-IyH" firstAttribute="top" secondItem="9s2-Hv-ovo" secondAttribute="bottom" constant="32" id="o63-Ce-1dH"/>
                             <constraint firstItem="9s2-Hv-ovo" firstAttribute="trailing" secondItem="7OR-bj-3Ya" secondAttribute="trailing" id="oAN-CD-Cpg"/>
+                            <constraint firstItem="0wE-l3-WHe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pfI-qp-U7G"/>
                             <constraint firstItem="Gn5-hG-ndT" firstAttribute="leading" secondItem="lwh-L2-eaU" secondAttribute="leading" constant="16" id="rSu-FZ-2QG"/>
                             <constraint firstItem="14S-A5-U2z" firstAttribute="top" secondItem="9s2-Hv-ovo" secondAttribute="top" id="vWA-eM-y1G"/>
+                            <constraint firstItem="EBO-UY-oF5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xbR-VA-Zs6"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="2rG-II-3al" appends="YES" id="BCs-Vb-IMS"/>
@@ -127,6 +154,7 @@
                     <navigationItem key="navigationItem" id="f16-dM-vNF"/>
                     <connections>
                         <outlet property="heightTextField" destination="lwh-L2-eaU" id="AIw-Tm-j60"/>
+                        <outlet property="nicknameTextField" destination="EBO-UY-oF5" id="qiP-EX-i0N"/>
                         <outlet property="randomButton" destination="TyZ-T5-2VK" id="hxk-mZ-39x"/>
                         <outlet property="resultButton" destination="Ta8-RR-twz" id="5il-fb-PpP"/>
                         <outlet property="warringLabel" destination="Zxb-j4-WzY" id="nk6-7W-fii"/>
