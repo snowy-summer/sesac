@@ -6,6 +6,14 @@
 
 import Foundation
 
+struct Magazine {
+    let title: String
+    let subtitle: String
+    let photoImage: String
+    let date: String
+    let link: String
+}
+
 struct MagazineInfo {
   let magazine: [Magazine] = [
     Magazine(title: "유럽 여행 쇼핑 성지, OOO은 꼭 가세요!",

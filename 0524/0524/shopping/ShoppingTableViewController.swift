@@ -85,11 +85,13 @@ final class ShoppingTableViewController: UITableViewController {
         
         cell.checkButton.setImage(checkImage,
                                   for: .normal)
+        cell.checkButton.tintColor = .black
         cell.checkButton.tag = indexPath.row
         cell.checkButton.addTarget(self,
                                    action: #selector(checkButtonClicked),
                                    for: .touchUpInside)
         
+        cell.likeButton.tintColor = .black
         cell.likeButton.setImage(starImage,
                                  for: .normal)
         cell.likeButton.tag = indexPath.row + 1000
