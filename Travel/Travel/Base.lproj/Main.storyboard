@@ -86,13 +86,47 @@
         <scene sceneID="I5g-m0-ohX">
             <objects>
                 <tableViewController id="Gwf-8k-ESe" customClass="RestaurantTableViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dnZ-dE-aqF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dnZ-dE-aqF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="FFe-YR-MNc">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shv-QA-Qyo">
+                                    <rect key="frame" x="0.0" y="0.0" width="318" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="dismissKeyboard:" destination="Gwf-8k-ESe" eventType="editingDidEndOnExit" id="hKB-nu-ZF9"/>
+                                        <action selector="searchingText:" destination="Gwf-8k-ESe" eventType="editingChanged" id="njh-Ye-hnz"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-ae-B7y">
+                                    <rect key="frame" x="318" y="0.0" width="75" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="searchRestaurant:" destination="Gwf-8k-ESe" eventType="touchUpInside" id="Vsm-uV-vkv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="rxa-ae-B7y" firstAttribute="top" secondItem="FFe-YR-MNc" secondAttribute="top" id="APK-TF-iBH"/>
+                                <constraint firstItem="rxa-ae-B7y" firstAttribute="leading" secondItem="shv-QA-Qyo" secondAttribute="trailing" id="PvM-an-a3g"/>
+                                <constraint firstAttribute="bottom" secondItem="rxa-ae-B7y" secondAttribute="bottom" id="Rwr-xf-VQ4"/>
+                                <constraint firstItem="shv-QA-Qyo" firstAttribute="top" secondItem="FFe-YR-MNc" secondAttribute="top" id="W4T-IV-fCO"/>
+                                <constraint firstAttribute="trailing" secondItem="rxa-ae-B7y" secondAttribute="trailing" id="XHG-fb-TQ9"/>
+                                <constraint firstItem="shv-QA-Qyo" firstAttribute="leading" secondItem="FFe-YR-MNc" secondAttribute="leading" id="d7d-S7-fMq"/>
+                                <constraint firstItem="rxa-ae-B7y" firstAttribute="leading" secondItem="shv-QA-Qyo" secondAttribute="trailing" id="sUO-yX-lfl"/>
+                                <constraint firstAttribute="bottom" secondItem="shv-QA-Qyo" secondAttribute="bottom" id="waG-iU-J5A"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" rowHeight="207" id="dg5-6J-Ly7" customClass="RestaurantTableViewCell" customModule="Travel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="207"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="207"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dg5-6J-Ly7" id="sTq-LG-Eyo">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="207"/>
@@ -166,10 +200,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="식당 목록" id="0JY-oA-W8W"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="shv-QA-Qyo" id="NSv-BQ-rcs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okQ-Eh-ihS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="615"/>
+            <point key="canvasLocation" x="1922.9007633587785" y="614.78873239436621"/>
         </scene>
         <!--잡지-->
         <scene sceneID="MrB-Up-axo">
@@ -196,6 +233,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IND-sb-5BC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HTs-d5-g9C">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

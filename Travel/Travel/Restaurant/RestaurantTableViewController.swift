@@ -9,14 +9,46 @@ import UIKit
 
 final class RestaurantTableViewController: UITableViewController {
     
-    private let restaurantList = RestaurantList()
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    private let originalList = RestaurantList().restaurantArray
+    
+    private var restaurantList = RestaurantList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
         tableView.rowHeight = tableView.frame.height / 5
     }
-
+    
+    @IBAction func searchRestaurant(_ sender: UIButton) {
+        
+       search()
+    }
+    
+    @IBAction func searchingText(_ sender: UITextField) {
+        
+        search()
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITextField) {
+        tableView.endEditing(true)
+    }
+    
+    private func search() {
+        
+        guard let text = searchTextField.text else { return }
+        
+        restaurantList.restaurantArray = originalList.filter{ $0.name.contains(text) }
+        
+        if restaurantList.restaurantArray.isEmpty {
+            restaurantList.restaurantArray = originalList
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
     
     
     //MARK: - tableView
