@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,6 +82,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgN-MV-84o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1924.4274809160304" y="-114.08450704225352"/>
+        </scene>
+        <!--도시 상세 정보-->
+        <scene sceneID="u3Y-Y8-HG5">
+            <objects>
+                <viewController id="QFR-Fm-Maj" customClass="InfomationViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ut-Md-sqp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cc2-qF-cMy">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="informationCell" id="0w3-0P-zQI" customClass="InformationTableViewCell" customModule="Travel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0w3-0P-zQI" id="ljV-So-UHi">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9W2-j3-oBF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cc2-qF-cMy" firstAttribute="leading" secondItem="9W2-j3-oBF" secondAttribute="leading" id="0dZ-GQ-boL"/>
+                            <constraint firstItem="9W2-j3-oBF" firstAttribute="trailing" secondItem="Cc2-qF-cMy" secondAttribute="trailing" id="EhG-fg-Z6S"/>
+                            <constraint firstItem="Cc2-qF-cMy" firstAttribute="top" secondItem="9W2-j3-oBF" secondAttribute="top" id="b4U-MZ-LGw"/>
+                            <constraint firstItem="9W2-j3-oBF" firstAttribute="bottom" secondItem="Cc2-qF-cMy" secondAttribute="bottom" id="jei-QF-rkS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="도시 상세 정보" id="de1-uc-8e4"/>
+                    <connections>
+                        <outlet property="informationTableView" destination="Cc2-qF-cMy" id="4u1-bG-CZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crs-cE-2zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988.5496183206105" y="-828.16901408450713"/>
         </scene>
         <!--식당 목록-->
         <scene sceneID="I5g-m0-ohX">
@@ -240,6 +282,7 @@
                     <connections>
                         <segue destination="6sA-If-j7W" kind="relationship" relationship="viewControllers" id="d83-7R-kXU"/>
                         <segue destination="C0o-Ce-mhd" kind="relationship" relationship="viewControllers" id="Xak-ne-2lx"/>
+                        <segue destination="e1C-AC-l6R" kind="relationship" relationship="viewControllers" id="SgQ-YZ-lAV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O65-SC-T5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,6 +307,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSq-5G-YDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="998" y="615"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="i4k-tP-Wwr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e1C-AC-l6R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wGp-GG-lhI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACk-jp-K22">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QFR-Fm-Maj" kind="relationship" relationship="rootViewController" id="Quj-Vb-0CN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45U-Pp-ysU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="-828.16901408450713"/>
         </scene>
     </scenes>
     <resources>
