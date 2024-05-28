@@ -7,16 +7,15 @@
 
 import UIKit
 
-class TravelTableViewCell: UITableViewCell {
+final class TravelTableViewCell: UITableViewCell {
     
-    
+    static let identifier = "travelCell"
     
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,11 +23,24 @@ class TravelTableViewCell: UITableViewCell {
         subtitleLabel.textColor = .darkGray
         dateLabel.textColor = .darkGray
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureContent(data: Magazine) {
+        
+        let imageURL = URL(string: data.photoImage)
+        
+        mainImageView.kf.setImage(with: imageURL)
+        
+        titleLabel.text = data.title
+        subtitleLabel.text = data.subtitle
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyMMdd"
+        
+        if let date = formatter.date(from: data.date) {
+            formatter.dateFormat = "yy년 MM월 dd일"
+            
+            dateLabel.text = formatter.string(for: date)
+        }
     }
 
 }

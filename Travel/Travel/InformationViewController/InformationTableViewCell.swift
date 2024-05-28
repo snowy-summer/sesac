@@ -9,6 +9,7 @@ import UIKit
 
 final class InformationTableViewCell: UITableViewCell {
 
+    static let identifier = "InformationTableViewCell"
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -24,10 +25,22 @@ final class InformationTableViewCell: UITableViewCell {
         configureLayout()
     }
     
+    override func prepareForReuse() {
+        for index in 0..<5 {
+            
+           guard let imageView = starStackView.arrangedSubviews[index] as? UIImageView else { return }
+
+            imageView.image = UIImage(systemName: "star")
+            
+        }
+    }
+    
     private func configureLayout() {
         mainImageView.layer.cornerRadius = 8
         
         titleLabel.font = .boldSystemFont(ofSize: 17)
+        titleLabel.numberOfLines = 0
+        
         subtitleLabel.font = .boldSystemFont(ofSize: 14)
         subtitleLabel.textColor = .lightGray
         

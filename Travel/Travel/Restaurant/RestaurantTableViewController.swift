@@ -12,8 +12,7 @@ final class RestaurantTableViewController: UITableViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     private let originalList = RestaurantList().restaurantArray
-    
-    private var restaurantList = RestaurantList()
+    private var restaurantList = RestaurantList().restaurantArray
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ final class RestaurantTableViewController: UITableViewController {
         tableView.rowHeight = tableView.frame.height / 5
     }
     
-    @IBAction func searchRestaurant(_ sender: UIButton) {
+    @IBAction func searchButtonClicked(_ sender: UIButton) {
         
        search()
     }
@@ -39,42 +38,32 @@ final class RestaurantTableViewController: UITableViewController {
         
         guard let text = searchTextField.text else { return }
         
-        restaurantList.restaurantArray = originalList.filter{ $0.name.contains(text) }
+        restaurantList = originalList.filter { $0.name.contains(text) || $0.category.contains(text) }
         
-        if restaurantList.restaurantArray.isEmpty {
-            restaurantList.restaurantArray = originalList
+        if restaurantList.isEmpty {
+            restaurantList = originalList
         }
         
         tableView.reloadData()
         
     }
     
-    
-    
     //MARK: - tableView
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.restaurantArray.count
+        return restaurantList.count
     }
     
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell",
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier,
                                                        for: indexPath) as? RestaurantTableViewCell else {
             return RestaurantTableViewCell()
         }
-        
-        let data = restaurantList.restaurantArray[indexPath.row]
-        let imageURL = URL(string: data.image)
-        
-        cell.restaurantImageView.kf.setImage(with: imageURL)
-        cell.nameLabel.text = "이름: " + data.name
-        cell.phoneNumberLabel.text = "번호: " + data.phoneNumber
-        cell.priceLabel.text = "가격: \(data.price)"
-        cell.addressLabel.text = "주소: " + data.address
-        cell.menuLabel.text = "종류: " + data.category
+       
+        cell.configureContent(data: restaurantList[indexPath.row])
         
         return cell
     }

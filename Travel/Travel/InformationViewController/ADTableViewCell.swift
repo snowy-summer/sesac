@@ -9,6 +9,8 @@ import UIKit
 
 class ADTableViewCell: UITableViewCell {
     
+    static let identifier = "ADTableViewCell"
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ADLogoLabel: UILabel!
     

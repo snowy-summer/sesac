@@ -100,8 +100,8 @@
 		6BE79AF92C00796900664B93 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
-				6BE79B242C01B54800664B93 /* TravelMagazine */,
 				6BE79B232C01B53700664B93 /* LifeCycle */,
+				6BE79B242C01B54800664B93 /* TravelMagazine */,
 				6BE79B222C01B51900664B93 /* Restaurant */,
 				6BE79B212C01B4CC00664B93 /* Data */,
 				6B5C9FDD2C04630B0009C0B3 /* InformationViewController */,

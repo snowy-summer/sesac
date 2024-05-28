@@ -16,19 +16,22 @@ final class InfomationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
+    }
+    
+    private func configureTableView() {
         informationTableView.delegate = self
         informationTableView.dataSource = self
         
-        let informationXib = UINib(nibName: "InformationTableViewCell", bundle: nil)
-        let AdXib = UINib(nibName: "ADTableViewCell", bundle: nil)
+        let informationXib = UINib(nibName: InformationTableViewCell.identifier, bundle: nil)
+        let AdXib = UINib(nibName: ADTableViewCell.identifier, bundle: nil)
         
-        informationTableView.register(informationXib, forCellReuseIdentifier: "informationCell")
+        informationTableView.register(informationXib, forCellReuseIdentifier: InformationTableViewCell.identifier)
         
-        informationTableView.register(AdXib, forCellReuseIdentifier: "ADCell")
+        informationTableView.register(AdXib, forCellReuseIdentifier: ADTableViewCell.identifier)
         
         informationTableView.rowHeight = view.frame.height * 0.2
     }
-    
 }
 
 extension InfomationViewController: UITableViewDelegate, UITableViewDataSource {
@@ -54,7 +57,7 @@ extension InfomationViewController: UITableViewDelegate, UITableViewDataSource {
         let data = list[indexPath.row]
         
         if data.ad {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ADCell") as?
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier) as?
                     ADTableViewCell else {
                 return ADTableViewCell()
             }
@@ -64,7 +67,7 @@ extension InfomationViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "informationCell") as?
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: InformationTableViewCell.identifier) as?
                 InformationTableViewCell else {
             return InformationTableViewCell()
         }
@@ -72,8 +75,6 @@ extension InfomationViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureData(data: data)
         
         return cell
-        
-        
         
     }
     
