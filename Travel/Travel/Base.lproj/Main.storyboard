@@ -51,6 +51,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="crc-4U-Z11" firstAttribute="width" secondItem="udC-s6-NJO" secondAttribute="width" multiplier="0.8" id="FdU-SG-V2A"/>
                                         <constraint firstItem="crc-4U-Z11" firstAttribute="top" secondItem="udC-s6-NJO" secondAttribute="topMargin" id="L2N-dx-lB3"/>
                                         <constraint firstItem="gF4-fs-rTP" firstAttribute="centerX" secondItem="KCo-CF-XvV" secondAttribute="centerX" id="Lcg-uW-qYH"/>
                                         <constraint firstItem="KCo-CF-XvV" firstAttribute="top" secondItem="crc-4U-Z11" secondAttribute="bottom" constant="12" id="Og5-Fd-DuB"/>
@@ -59,7 +60,6 @@
                                         <constraint firstItem="dzf-6D-L30" firstAttribute="top" secondItem="gF4-fs-rTP" secondAttribute="bottom" constant="16" id="bsq-QE-Yzg"/>
                                         <constraint firstItem="crc-4U-Z11" firstAttribute="centerX" secondItem="udC-s6-NJO" secondAttribute="centerX" id="haR-Up-8fp"/>
                                         <constraint firstItem="KCo-CF-XvV" firstAttribute="centerX" secondItem="crc-4U-Z11" secondAttribute="centerX" id="kZu-h3-Nmf"/>
-                                        <constraint firstItem="crc-4U-Z11" firstAttribute="width" secondItem="udC-s6-NJO" secondAttribute="width" multiplier="0.8" id="lzT-cd-x1x"/>
                                         <constraint firstItem="KCo-CF-XvV" firstAttribute="width" secondItem="crc-4U-Z11" secondAttribute="width" id="uKw-uX-Lid"/>
                                         <constraint firstItem="gF4-fs-rTP" firstAttribute="width" secondItem="KCo-CF-XvV" secondAttribute="width" id="wqn-OB-NMY"/>
                                     </constraints>
@@ -86,13 +86,13 @@
         <!--도시 상세 정보-->
         <scene sceneID="u3Y-Y8-HG5">
             <objects>
-                <viewController id="QFR-Fm-Maj" customClass="InfomationViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfomationViewController" id="QFR-Fm-Maj" customClass="InfomationViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ut-Md-sqp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cc2-qF-cMy">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="informationCell" id="0w3-0P-zQI" customClass="InformationTableViewCell" customModule="Travel" customModuleProvider="target">
@@ -117,12 +117,42 @@
                     </view>
                     <navigationItem key="navigationItem" title="도시 상세 정보" id="de1-uc-8e4"/>
                     <connections>
-                        <outlet property="informationTableView" destination="Cc2-qF-cMy" id="4u1-bG-CZU"/>
+                        <outlet property="informationTableView" destination="Cc2-qF-cMy" id="FnZ-9q-9bH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crs-cE-2zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988.5496183206105" y="-828.16901408450713"/>
+            <point key="canvasLocation" x="2782" y="-828"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="CGg-2z-MxN">
+            <objects>
+                <viewController id="UtF-H5-Xkt" customClass="CityViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ED9-nk-UC6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zf0-mg-eTp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BF9-go-YvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3440" y="-1134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gFt-94-U2K">
+            <objects>
+                <viewController id="Zrd-Kx-aj4" customClass="ADViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yC-B0-K31">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VyM-xa-1sR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2h-qp-5Dz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3439" y="-470"/>
         </scene>
         <!--식당 목록-->
         <scene sceneID="I5g-m0-ohX">
@@ -179,36 +209,36 @@
                                                 <constraint firstAttribute="width" secondItem="e0E-wG-DTR" secondAttribute="height" multiplier="1:1" id="7JO-BK-wdu"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EX2-kM-Dqd">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EX2-kM-Dqd">
                                             <rect key="frame" x="207" y="8" width="178" height="191"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3D-z7-oYt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="28.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j9-I7-rYC">
-                                                    <rect key="frame" x="0.0" y="42.666666666666664" width="178" height="20.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="40.666666666666664" width="178" height="28.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT2-DZ-2SJ">
-                                                    <rect key="frame" x="0.0" y="85.333333333333329" width="178" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="81.333333333333329" width="178" height="28.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메뉴:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUB-F4-7W5">
-                                                    <rect key="frame" x="0.0" y="127.99999999999999" width="178" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="121.66666666666667" width="178" height="28.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khg-6P-c0R">
-                                                    <rect key="frame" x="0.0" y="170.66666666666666" width="178" height="20.333333333333343"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="162.33333333333334" width="178" height="28.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -282,70 +312,11 @@
                         <segue destination="6sA-If-j7W" kind="relationship" relationship="viewControllers" id="d83-7R-kXU"/>
                         <segue destination="C0o-Ce-mhd" kind="relationship" relationship="viewControllers" id="Xak-ne-2lx"/>
                         <segue destination="e1C-AC-l6R" kind="relationship" relationship="viewControllers" id="SgQ-YZ-lAV"/>
-                        <segue destination="Sd0-89-Nc3" kind="relationship" relationship="viewControllers" id="a5z-TF-t6G"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O65-SC-T5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70.992366412213741" y="-114.08450704225352"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="omF-AO-Btr">
-            <objects>
-                <tableViewController id="Sd0-89-Nc3" customClass="ExpandTableViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="AFV-cL-Irh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expandCell" rowHeight="79" id="Rih-5k-ZTC" customClass="ExpandTableViewCell" customModule="Travel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="79"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rih-5k-ZTC" id="X1w-Eu-s08">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24i-4w-SoM">
-                                            <rect key="frame" x="20" y="48" width="353" height="20"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26D-JW-V5x">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="zrf-Bq-Hzj"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="26D-JW-V5x" firstAttribute="top" secondItem="X1w-Eu-s08" secondAttribute="top" id="0PF-KV-lEq"/>
-                                        <constraint firstItem="24i-4w-SoM" firstAttribute="leading" secondItem="X1w-Eu-s08" secondAttribute="leadingMargin" id="4IE-PP-Sa8"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="24i-4w-SoM" secondAttribute="trailing" id="9Fl-wY-tBa"/>
-                                        <constraint firstItem="26D-JW-V5x" firstAttribute="leading" secondItem="X1w-Eu-s08" secondAttribute="leading" id="LF7-9N-iUb"/>
-                                        <constraint firstAttribute="trailing" secondItem="26D-JW-V5x" secondAttribute="trailing" id="T34-JN-QMN"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="24i-4w-SoM" secondAttribute="bottom" id="bX7-9G-FMz"/>
-                                        <constraint firstItem="24i-4w-SoM" firstAttribute="top" secondItem="26D-JW-V5x" secondAttribute="bottom" constant="8" id="dkt-0h-tGO"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="testLabel" destination="24i-4w-SoM" id="GM0-1u-8K8"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Sd0-89-Nc3" id="3Bc-oB-VEq"/>
-                            <outlet property="delegate" destination="Sd0-89-Nc3" id="tQc-fN-3Bt"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ihv-f5-tDf"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pPX-1Q-Pva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-8.3969465648854964" y="953.52112676056345"/>
+            <point key="canvasLocation" x="-1755" y="615"/>
         </scene>
         <!--식당 목록-->
         <scene sceneID="qHD-wK-ndN">
@@ -366,11 +337,56 @@
             </objects>
             <point key="canvasLocation" x="998" y="615"/>
         </scene>
-        <!--Item-->
+        <!--인기 도시-->
+        <scene sceneID="dBx-JD-J1I">
+            <objects>
+                <viewController id="Kl9-I6-m97" customClass="PopularCityViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DK-kl-Xit">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eLr-cN-ntc">
+                                <rect key="frame" x="16" y="103" width="361" height="32"/>
+                                <segments>
+                                    <segment title="모두"/>
+                                    <segment title="국내"/>
+                                    <segment title="해외"/>
+                                </segments>
+                                <connections>
+                                    <action selector="pickOtherCategory:" destination="Kl9-I6-m97" eventType="valueChanged" id="5dv-IO-LYb"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cye-i9-Rue">
+                                <rect key="frame" x="0.0" y="134" width="393" height="635"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BSl-Ig-mIg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eLr-cN-ntc" firstAttribute="leading" secondItem="BSl-Ig-mIg" secondAttribute="leading" constant="16" id="3S5-NG-vPI"/>
+                            <constraint firstItem="BSl-Ig-mIg" firstAttribute="trailing" secondItem="eLr-cN-ntc" secondAttribute="trailing" constant="16" id="9Bt-rN-6Kb"/>
+                            <constraint firstItem="BSl-Ig-mIg" firstAttribute="trailing" secondItem="cye-i9-Rue" secondAttribute="trailing" id="EpU-dd-8Bc"/>
+                            <constraint firstItem="cye-i9-Rue" firstAttribute="leading" secondItem="BSl-Ig-mIg" secondAttribute="leading" id="QeP-09-Ofa"/>
+                            <constraint firstItem="BSl-Ig-mIg" firstAttribute="bottom" secondItem="cye-i9-Rue" secondAttribute="bottom" id="dza-0b-Xwl"/>
+                            <constraint firstItem="eLr-cN-ntc" firstAttribute="top" secondItem="BSl-Ig-mIg" secondAttribute="top" id="pgF-6y-Qds"/>
+                            <constraint firstItem="cye-i9-Rue" firstAttribute="top" secondItem="eLr-cN-ntc" secondAttribute="bottom" id="ryQ-IP-9Yc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="인기 도시" id="fc6-ke-pQH"/>
+                    <connections>
+                        <outlet property="CityTableView" destination="cye-i9-Rue" id="6Z7-sv-qjQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVg-lu-Bl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="-828"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="i4k-tP-Wwr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e1C-AC-l6R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="bookmark.fill" catalog="system" id="wGp-GG-lhI"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="wGp-GG-lhI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACk-jp-K22">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -378,7 +394,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QFR-Fm-Maj" kind="relationship" relationship="rootViewController" id="Quj-Vb-0CN"/>
+                        <segue destination="Kl9-I6-m97" kind="relationship" relationship="rootViewController" id="3Hs-UI-Drv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45U-Pp-ysU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -387,7 +403,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <systemColor name="systemBackgroundColor">

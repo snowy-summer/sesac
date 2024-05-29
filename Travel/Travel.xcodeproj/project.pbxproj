@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B3474AA2C0601A50043BAE0 /* ExpandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3474A92C0601A50043BAE0 /* ExpandTableViewController.swift */; };
+		6B3474AA2C0601A50043BAE0 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3474A92C0601A50043BAE0 /* PopularCityViewController.swift */; };
 		6B5C9FD42C044B110009C0B3 /* InfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C9FD32C044B110009C0B3 /* InfomationViewController.swift */; };
 		6B5C9FD72C04531B0009C0B3 /* ADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C9FD52C04531B0009C0B3 /* ADTableViewCell.swift */; };
 		6B5C9FD82C04531B0009C0B3 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5C9FD62C04531B0009C0B3 /* ADTableViewCell.xib */; };
 		6B5C9FDA2C04586F0009C0B3 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C9FD92C04586F0009C0B3 /* TravelModel.swift */; };
 		6B5C9FDC2C045E9B0009C0B3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C9FDB2C045E9B0009C0B3 /* UIColor+Extension.swift */; };
+		6B65D5422C06E7A50078D11D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65D5412C06E7A50078D11D /* ADViewController.swift */; };
+		6B65D5442C06E7B80078D11D /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65D5432C06E7B80078D11D /* CityViewController.swift */; };
+		6B65D5472C0712C70078D11D /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65D5462C0712C70078D11D /* CityInfo.swift */; };
+		6B65D54A2C0714520078D11D /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65D5482C0714520078D11D /* CityTableViewCell.swift */; };
+		6B65D54B2C0714520078D11D /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B65D5492C0714520078D11D /* CityTableViewCell.xib */; };
 		6BD4E9212C044A160071EE12 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4E91F2C044A160071EE12 /* InformationTableViewCell.swift */; };
 		6BD4E9222C044A160071EE12 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4E9202C044A160071EE12 /* InformationTableViewCell.xib */; };
 		6BE79AFB2C00796900664B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE79AFA2C00796900664B93 /* AppDelegate.swift */; };
@@ -30,12 +35,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B3474A92C0601A50043BAE0 /* ExpandTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandTableViewController.swift; sourceTree = "<group>"; };
+		6B3474A92C0601A50043BAE0 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		6B5C9FD32C044B110009C0B3 /* InfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewController.swift; sourceTree = "<group>"; };
 		6B5C9FD52C04531B0009C0B3 /* ADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableViewCell.swift; sourceTree = "<group>"; };
 		6B5C9FD62C04531B0009C0B3 /* ADTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
 		6B5C9FD92C04586F0009C0B3 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		6B5C9FDB2C045E9B0009C0B3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6B65D5412C06E7A50078D11D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		6B65D5432C06E7B80078D11D /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		6B65D5462C0712C70078D11D /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		6B65D5482C0714520078D11D /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		6B65D5492C0714520078D11D /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		6BD4E91F2C044A160071EE12 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		6BD4E9202C044A160071EE12 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
 		6BE79AF72C00796900664B93 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,9 +78,10 @@
 		6B5C9FDD2C04630B0009C0B3 /* InformationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6B65D5452C06E7C00078D11D /* Cell */,
 				6B5C9FD32C044B110009C0B3 /* InfomationViewController.swift */,
-				6B5C9FD52C04531B0009C0B3 /* ADTableViewCell.swift */,
-				6BD4E91F2C044A160071EE12 /* InformationTableViewCell.swift */,
+				6B65D5412C06E7A50078D11D /* ADViewController.swift */,
+				6B65D5432C06E7B80078D11D /* CityViewController.swift */,
 			);
 			path = InformationViewController;
 			sourceTree = "<group>";
@@ -81,6 +92,28 @@
 				6B5C9FDB2C045E9B0009C0B3 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		6B5E8B922C071E53000D0BCF /* PopularCity */ = {
+			isa = PBXGroup;
+			children = (
+				6B3474A92C0601A50043BAE0 /* PopularCityViewController.swift */,
+				6B65D5492C0714520078D11D /* CityTableViewCell.xib */,
+				6B65D5482C0714520078D11D /* CityTableViewCell.swift */,
+				6B5C9FDD2C04630B0009C0B3 /* InformationViewController */,
+			);
+			path = PopularCity;
+			sourceTree = "<group>";
+		};
+		6B65D5452C06E7C00078D11D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B5C9FD52C04531B0009C0B3 /* ADTableViewCell.swift */,
+				6B5C9FD62C04531B0009C0B3 /* ADTableViewCell.xib */,
+				6BD4E91F2C044A160071EE12 /* InformationTableViewCell.swift */,
+				6BD4E9202C044A160071EE12 /* InformationTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		6BE79AEE2C00796900664B93 = {
@@ -105,13 +138,10 @@
 				6BE79B232C01B53700664B93 /* LifeCycle */,
 				6BE79B242C01B54800664B93 /* TravelMagazine */,
 				6BE79B222C01B51900664B93 /* Restaurant */,
+				6B5E8B922C071E53000D0BCF /* PopularCity */,
 				6BE79B212C01B4CC00664B93 /* Data */,
-				6B5C9FDD2C04630B0009C0B3 /* InformationViewController */,
 				6B5C9FDE2C0463250009C0B3 /* Extension */,
 				6BE79B002C00796900664B93 /* Main.storyboard */,
-				6B3474A92C0601A50043BAE0 /* ExpandTableViewController.swift */,
-				6B5C9FD62C04531B0009C0B3 /* ADTableViewCell.xib */,
-				6BD4E9202C044A160071EE12 /* InformationTableViewCell.xib */,
 				6BE79B032C00796A00664B93 /* Assets.xcassets */,
 				6BE79B052C00796A00664B93 /* LaunchScreen.storyboard */,
 				6BE79B082C00796A00664B93 /* Info.plist */,
@@ -122,6 +152,7 @@
 		6BE79B212C01B4CC00664B93 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6B65D5462C0712C70078D11D /* CityInfo.swift */,
 				6BE79B1B2C01A3EF00664B93 /* MagazineInfo.swift */,
 				6BE79B1D2C01AC8A00664B93 /* Restaurant.swift */,
 				6B5C9FD92C04586F0009C0B3 /* TravelModel.swift */,
@@ -224,6 +255,7 @@
 				6BE79B072C00796A00664B93 /* Base in Resources */,
 				6BD4E9222C044A160071EE12 /* InformationTableViewCell.xib in Resources */,
 				6BE79B022C00796900664B93 /* Base in Resources */,
+				6B65D54B2C0714520078D11D /* CityTableViewCell.xib in Resources */,
 				6B5C9FD82C04531B0009C0B3 /* ADTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B65D54A2C0714520078D11D /* CityTableViewCell.swift in Sources */,
 				6B5C9FD42C044B110009C0B3 /* InfomationViewController.swift in Sources */,
+				6B65D5422C06E7A50078D11D /* ADViewController.swift in Sources */,
 				6BD4E9212C044A160071EE12 /* InformationTableViewCell.swift in Sources */,
 				6BE79AFF2C00796900664B93 /* RestaurantTableViewController.swift in Sources */,
 				6B5C9FDA2C04586F0009C0B3 /* TravelModel.swift in Sources */,
@@ -244,7 +278,9 @@
 				6BE79AFD2C00796900664B93 /* SceneDelegate.swift in Sources */,
 				6BE79B1E2C01AC8A00664B93 /* Restaurant.swift in Sources */,
 				6BE79B202C01AE6900664B93 /* RestaurantTableViewCell.swift in Sources */,
-				6B3474AA2C0601A50043BAE0 /* ExpandTableViewController.swift in Sources */,
+				6B3474AA2C0601A50043BAE0 /* PopularCityViewController.swift in Sources */,
+				6B65D5442C06E7B80078D11D /* CityViewController.swift in Sources */,
+				6B65D5472C0712C70078D11D /* CityInfo.swift in Sources */,
 				6BE79B112C00799600664B93 /* TravelTableViewCell.swift in Sources */,
 				6B5C9FDC2C045E9B0009C0B3 /* UIColor+Extension.swift in Sources */,
 				6BE79B0F2C00797C00664B93 /* TravelTableViewController.swift in Sources */,
@@ -326,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -383,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -406,8 +442,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,8 +476,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
