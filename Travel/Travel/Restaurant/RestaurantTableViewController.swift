@@ -11,13 +11,14 @@ final class RestaurantTableViewController: UITableViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     
-    private let originalList = RestaurantList().restaurantArray
-    private var restaurantList = RestaurantList().restaurantArray
+    private let originalList = RestaurantList.restaurantArray
+    private var filteredList = RestaurantList.restaurantArray
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
         tableView.rowHeight = tableView.frame.height / 5
+        configureNavigationBar()
     }
     
     @IBAction func searchButtonClicked(_ sender: UIButton) {
@@ -38,21 +39,29 @@ final class RestaurantTableViewController: UITableViewController {
         
         guard let text = searchTextField.text else { return }
         
-        restaurantList = originalList.filter { $0.name.contains(text) || $0.category.contains(text) }
+        filteredList = originalList.filter { $0.name.contains(text) || $0.category.contains(text) }
         
-        if restaurantList.isEmpty {
-            restaurantList = originalList
+        if filteredList.isEmpty {
+            filteredList = originalList
         }
         
         tableView.reloadData()
         
     }
     
+    @objc private func pushMapView() {
+        
+        guard let mapViewController = storyboard?.instantiateViewController(identifier: MapViewController.identifier) as? MapViewController else { return }
+        
+        navigationController?.pushViewController(mapViewController,
+                                                 animated: true)
+    }
+    
     //MARK: - tableView
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.count
+        return filteredList.count
     }
     
     override func tableView(_ tableView: UITableView,
@@ -63,10 +72,23 @@ final class RestaurantTableViewController: UITableViewController {
             return RestaurantTableViewCell()
         }
        
-        cell.configureContent(data: restaurantList[indexPath.row])
+        cell.configureContent(data: filteredList[indexPath.row])
         
         return cell
     }
 
 }
 
+// MARK: - configuration
+
+extension RestaurantTableViewController {
+    
+    private func configureNavigationBar() {
+        let mapViewButton = UIBarButtonItem(image: UIImage(systemName: "map"),
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(pushMapView))
+        
+        navigationItem.rightBarButtonItem = mapViewButton
+    }
+}

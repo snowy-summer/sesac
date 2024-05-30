@@ -10,7 +10,6 @@ import UIKit
 final class InfomationViewController: UIViewController {
     
     @IBOutlet weak var informationTableView: UITableView!
-    
 
     private var list = TravelInfo().travel
     
@@ -79,14 +78,26 @@ extension InfomationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         
-        if list[indexPath.row].ad {
+        let data =  list[indexPath.row]
+        if data.ad {
             
-            let navigationController = UINavigationController(rootViewController: ADViewController())
+           guard let adViewController = storyboard?.instantiateViewController(identifier: ADViewController.identifier) as? ADViewController else { return }
+            
+            adViewController.adDescription = data.title
+            
+            let navigationController = UINavigationController(rootViewController: adViewController)
+
             navigationController.modalPresentationStyle = .fullScreen
             present(navigationController, animated: true)
             
         } else {
-            navigationController?.pushViewController(CityViewController(), animated: true)
+            
+            guard let cityViewController = storyboard?.instantiateViewController(identifier: CityViewController.identifier) as? CityViewController else { return }
+            
+            cityViewController.data = data
+            
+            navigationController?.pushViewController(cityViewController, animated: true)
+            
         }
         
     }

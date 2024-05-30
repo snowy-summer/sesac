@@ -10,7 +10,7 @@ import UIKit
 final class CityTableViewCell: UITableViewCell {
     
     static let identifier = "CityTableViewCell"
-
+    
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cityListLabel: UILabel!
@@ -19,7 +19,7 @@ final class CityTableViewCell: UITableViewCell {
         super.awakeFromNib()
         configureLayout()
     }
-
+    
     
     private func configureLayout() {
         self.selectionStyle = .none
@@ -58,10 +58,10 @@ final class CityTableViewCell: UITableViewCell {
     private func attributeText(text: String?, label: UILabel) {
         
         guard let labelText = label.text,
-            let text = text else { return }
+              let text = text else { return }
         
         let attributedString = NSMutableAttributedString(string: labelText)
-
+        
         if let range = labelText.range(of: text) {
             let nsRange = NSRange(range, in: labelText)
             attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: nsRange)

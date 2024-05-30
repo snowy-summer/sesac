@@ -18,6 +18,7 @@
 		6B65D5472C0712C70078D11D /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65D5462C0712C70078D11D /* CityInfo.swift */; };
 		6B65D54A2C0714520078D11D /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B65D5482C0714520078D11D /* CityTableViewCell.swift */; };
 		6B65D54B2C0714520078D11D /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B65D5492C0714520078D11D /* CityTableViewCell.xib */; };
+		6B8A4FBD2C087B97007C281F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A4FBC2C087B97007C281F /* MapViewController.swift */; };
 		6BD4E9212C044A160071EE12 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4E91F2C044A160071EE12 /* InformationTableViewCell.swift */; };
 		6BD4E9222C044A160071EE12 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4E9202C044A160071EE12 /* InformationTableViewCell.xib */; };
 		6BE79AFB2C00796900664B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE79AFA2C00796900664B93 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		6B65D5462C0712C70078D11D /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		6B65D5482C0714520078D11D /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		6B65D5492C0714520078D11D /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
+		6B8A4FBC2C087B97007C281F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6BD4E91F2C044A160071EE12 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		6BD4E9202C044A160071EE12 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
 		6BE79AF72C00796900664B93 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6BE79AFE2C00796900664B93 /* RestaurantTableViewController.swift */,
+				6B8A4FBC2C087B97007C281F /* MapViewController.swift */,
 				6BE79B1F2C01AE6900664B93 /* RestaurantTableViewCell.swift */,
 			);
 			path = Restaurant;
@@ -274,6 +277,7 @@
 				6BE79AFF2C00796900664B93 /* RestaurantTableViewController.swift in Sources */,
 				6B5C9FDA2C04586F0009C0B3 /* TravelModel.swift in Sources */,
 				6BE79AFB2C00796900664B93 /* AppDelegate.swift in Sources */,
+				6B8A4FBD2C087B97007C281F /* MapViewController.swift in Sources */,
 				6B5C9FD72C04531B0009C0B3 /* ADTableViewCell.swift in Sources */,
 				6BE79AFD2C00796900664B93 /* SceneDelegate.swift in Sources */,
 				6BE79B1E2C01AC8A00664B93 /* Restaurant.swift in Sources */,

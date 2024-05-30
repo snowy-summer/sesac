@@ -24,6 +24,7 @@ class ADTableViewCell: UITableViewCell {
     }
     
     private func configureLayout() {
+        self.selectionStyle = .none
         
         ADLogoLabel.layer.cornerRadius = 4
         ADLogoLabel.clipsToBounds = true

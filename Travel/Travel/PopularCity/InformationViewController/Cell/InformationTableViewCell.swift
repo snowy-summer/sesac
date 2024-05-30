@@ -36,6 +36,8 @@ final class InformationTableViewCell: UITableViewCell {
     }
     
     private func configureLayout() {
+        self.selectionStyle = .none
+        
         mainImageView.layer.cornerRadius = 8
         
         titleLabel.font = .boldSystemFont(ofSize: 17)

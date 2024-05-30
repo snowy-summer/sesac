@@ -14,6 +14,7 @@ struct Travel {
     let save: Int?
     let like: Bool?
     let ad: Bool
+    
 }
 
 struct TravelInfo {

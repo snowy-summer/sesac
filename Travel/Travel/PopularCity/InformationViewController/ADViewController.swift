@@ -9,15 +9,23 @@ import UIKit
 
 final class ADViewController: UIViewController {
     
+    static let identifier = "ADViewController"
+    
+    var adDescription: String?
+    
+    @IBOutlet weak var adDescriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         configureNaviagationBar()
+        adDescriptionLabel.text = adDescription
     }
     
     private func configureNaviagationBar() {
         navigationItem.title = "광고"
+        
         let cancelButton = UIBarButtonItem(image: UIImage(systemName: "xmark"),
                                            style: .plain,
                                            target: self,
