@@ -11,6 +11,7 @@ class PopularCityViewController: UIViewController {
     
     @IBOutlet weak var CityTableView: UITableView!
 //    @IBOutlet weak var citySearchBar: UISearchBar!
+    private let searchController = UISearchController(searchResultsController: nil)
     
     private var list = CityInfo.city
     private var filteredList = CityInfo.city
@@ -67,6 +68,7 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
         let data = list[indexPath.row]
         
         cell.configureContent(data: data)
+        cell.highlightedLabel(searchText: searchController.searchBar.text)
         
         return cell
     }
@@ -149,8 +151,9 @@ extension PopularCityViewController {
 //    }
     
     private func configureSearchController() {
-        let searchController = UISearchController(searchResultsController: nil)
+        
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        
     }
 }
