@@ -10,8 +10,6 @@ import MapKit
 
 final class MapViewController: UIViewController {
     
-    static let identifier = "MapViewController"
-    
     @IBOutlet weak var mapView: MKMapView!
     
     let data = RestaurantList.restaurantArray

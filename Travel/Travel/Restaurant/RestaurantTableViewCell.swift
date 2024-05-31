@@ -8,8 +8,6 @@
 import UIKit
 
 final class RestaurantTableViewCell: UITableViewCell {
-
-    static let identifier = "RestaurantTableViewCell"
     
     @IBOutlet weak var restaurantImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

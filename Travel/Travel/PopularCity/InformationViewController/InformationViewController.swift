@@ -1,5 +1,5 @@
 //
-//  InfomationViewController.swift
+//  InformationViewController.swift
 //  Travel
 //
 //  Created by 최승범 on 5/27/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class InfomationViewController: UIViewController {
+final class InformationViewController: UIViewController {
     
     @IBOutlet weak var informationTableView: UITableView!
 
@@ -35,7 +35,7 @@ final class InfomationViewController: UIViewController {
     }
 }
 
-extension InfomationViewController: UITableViewDelegate, UITableViewDataSource {
+extension InformationViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {

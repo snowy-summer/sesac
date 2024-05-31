@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="travelCell" rowHeight="475" id="73C-z8-5fn" customClass="TravelTableViewCell" customModule="Travel" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelTableViewCell" rowHeight="475" id="73C-z8-5fn" customClass="TravelTableViewCell" customModule="Travel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="475"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="73C-z8-5fn" id="udC-s6-NJO">
@@ -87,7 +87,7 @@
         <!--도시 상세 정보-->
         <scene sceneID="u3Y-Y8-HG5">
             <objects>
-                <viewController storyboardIdentifier="InfomationViewController" id="QFR-Fm-Maj" customClass="InfomationViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfomationViewController" id="QFR-Fm-Maj" customClass="InformationViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ut-Md-sqp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

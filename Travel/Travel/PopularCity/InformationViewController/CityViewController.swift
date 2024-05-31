@@ -9,8 +9,6 @@ import UIKit
 
 final class CityViewController: UIViewController {
     
-    static let identifier = "CityViewController"
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
     

@@ -9,8 +9,6 @@ import UIKit
 
 final class CityTableViewCell: UITableViewCell {
     
-    static let identifier = "CityTableViewCell"
-    
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cityListLabel: UILabel!

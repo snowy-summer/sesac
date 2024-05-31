@@ -9,8 +9,6 @@ import UIKit
 
 final class TravelTableViewCell: UITableViewCell {
     
-    static let identifier = "travelCell"
-    
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!

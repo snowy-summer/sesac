@@ -75,7 +75,7 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let vc = storyboard?.instantiateViewController(identifier: "InfomationViewController") as? InfomationViewController else { return }
+        guard let vc = storyboard?.instantiateViewController(identifier: InformationViewController.identifier) as? InformationViewController else { return }
         
         navigationController?.pushViewController(vc,
                                                  animated: true)

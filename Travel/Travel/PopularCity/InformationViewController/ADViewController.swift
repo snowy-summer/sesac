@@ -9,8 +9,6 @@ import UIKit
 
 final class ADViewController: UIViewController {
     
-    static let identifier = "ADViewController"
-    
     var adDescription: String?
     
     @IBOutlet weak var adDescriptionLabel: UILabel!

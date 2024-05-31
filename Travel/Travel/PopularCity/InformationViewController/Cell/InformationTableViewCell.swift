@@ -9,8 +9,6 @@ import UIKit
 
 final class InformationTableViewCell: UITableViewCell {
 
-    static let identifier = "InformationTableViewCell"
-
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var starStackView: UIStackView!
