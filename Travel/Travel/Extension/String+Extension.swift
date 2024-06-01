@@ -22,4 +22,18 @@ extension String {
         return "실패"
     }
     
+    func timeFormatted() -> String {
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yyyy-MM-dd HH:mm"
+        
+        if let formattedDate = formmater.date(from: self) {
+            formmater.dateFormat = "hh:mm a"
+            formmater.locale = Locale(identifier: "ko_KR")
+            
+            return formmater.string(from: formattedDate)
+        }
+        
+        return "실패"
+    }
+    
 }

@@ -31,7 +31,7 @@ final class ChatListTableViewCell: UITableViewCell {
 extension ChatListTableViewCell {
     
     private func configureDefault() {
-        chatRoomImageView.contentMode = .scaleAspectFit
+        chatRoomImageView.contentMode = .scaleAspectFill
         chatRoomImageView.layer.borderWidth = 0.5
         chatRoomImageView.layer.borderColor = UIColor.lightGray.cgColor
         

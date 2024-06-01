@@ -12,8 +12,8 @@ final class TravelTalkViewController: UIViewController {
     private let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var travelTalkTableView: UITableView!
     
-    private var chatList = mockChatList
-    private var searchedChatList = [ChatRoom]()
+    private var chatRoomList = mockChatList
+    private var searchedChatRoomList = [ChatRoom]()
     
     override func viewDidLoad() {
         configureNavigationBar()
@@ -23,20 +23,35 @@ final class TravelTalkViewController: UIViewController {
     }
 }
 
+//MARK: - TableViewDelegate, DataSource
+
 extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatList.count
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        
+        return chatRoomList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatListTableViewCell.identifier) as? ChatListTableViewCell else { return ChatListTableViewCell() }
         
-        let data = chatList[indexPath.row]
+        let data = chatRoomList[indexPath.row]
         
         cell.configureContent(data: data)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        
+        guard let viewController = storyboard?.instantiateViewController(identifier: ChatRoomViewController.identifier) as? ChatRoomViewController else { return }
+        
+        viewController.navigationItem.title = chatRoomList[indexPath.row].chatroomName
+        viewController.chatList = chatRoomList[indexPath.row].chatList
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     
@@ -52,9 +67,9 @@ extension TravelTalkViewController: UISearchResultsUpdating {
         text = text.lowercased()
         text = text.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        searchedChatList = mockChatList.filter { $0.chatroomName.lowercased().contains(text) }
+        searchedChatRoomList = mockChatList.filter { $0.chatroomName.lowercased().contains(text) }
         
-        chatList = searchedChatList.isEmpty ? mockChatList : searchedChatList
+        chatRoomList = searchedChatRoomList.isEmpty ? mockChatList : searchedChatRoomList
         
         travelTalkTableView.reloadData()
         
