@@ -23,11 +23,12 @@ final class ChatRoomViewController: UIViewController {
         scrollDown()
         configureChatTextView()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     deinit {
-        
         NotificationCenter.default.removeObserver(self)
     }
     
