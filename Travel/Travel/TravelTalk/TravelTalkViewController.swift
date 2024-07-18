@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import SnapKit
 
 final class TravelTalkViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var travelTalkTableView: UITableView!
-    
     private var chatRoomList = mockChatList
     private var searchedChatRoomList = [ChatRoom]()
     
@@ -111,4 +111,72 @@ extension TravelTalkViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "친구의 이름을 검색해보세요"
     }
+}
+
+
+final class TravelTalkViewControllerUseCollectionView: UIViewController {
+    
+    enum Section: CaseIterable {
+        case roomList
+    }
+    
+    private lazy var collectionView = UICollectionView(frame: .zero,
+                                                       collectionViewLayout: createLayout())
+    var dataSource: UICollectionViewDiffableDataSource<Section, ChatRoom>!
+    private var chatRoomList = mockChatList
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.directionalEdges.equalTo(view.safeAreaLayoutGuide)
+        }
+        configureDataSource()
+        updateSnaphot()
+    }
+    
+    
+    private func createLayout() -> UICollectionViewLayout {
+        
+        var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        configuration.showsSeparators = false
+        
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        
+        return layout
+    }
+    
+    private func configureDataSource() {
+        
+        var registeration: UICollectionView.CellRegistration<UICollectionViewListCell, ChatRoom>
+        
+        registeration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
+            
+            var content = UIListContentConfiguration.valueCell()
+            content.text = itemIdentifier.chatroomName
+            content.image = UIImage(named: itemIdentifier.chatroomImage[0])
+            content.imageProperties.maximumSize = CGSize(width: 40, height: 40)
+            content.imageProperties.cornerRadius = content.image!.size.width / 2
+            
+            cell.contentConfiguration = content
+        }
+        
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView,
+                                                        cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: registeration,
+                                                                    for: indexPath, item: itemIdentifier)
+            return cell
+        })
+    }
+    
+    
+    private func updateSnaphot() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section,ChatRoom>()
+        snapshot.appendSections(Section.allCases)
+        snapshot.appendItems(chatRoomList, toSection: .roomList)
+        dataSource.apply(snapshot)
+    }
+    
 }
