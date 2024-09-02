@@ -135,6 +135,7 @@ final class TravelTalkViewControllerUseCollectionView: UIViewController {
         }
         configureDataSource()
         updateSnaphot()
+    
     }
     
     
