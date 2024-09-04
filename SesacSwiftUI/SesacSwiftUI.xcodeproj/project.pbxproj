@@ -10,6 +10,7 @@
 		6B9D120C2C86F45C00FF6A73 /* CoinMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D120B2C86F45C00FF6A73 /* CoinMarketView.swift */; };
 		6B9D120E2C86F76600FF6A73 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D120D2C86F76600FF6A73 /* Market.swift */; };
 		6B9D12122C86FD2300FF6A73 /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D12112C86FD2300FF6A73 /* UpbitAPI.swift */; };
+		6B9D123E2C884AAD00FF6A73 /* RandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D123D2C884AAD00FF6A73 /* RandomImageView.swift */; };
 		6BAFCA492C857C9300F89825 /* SesacSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFCA482C857C9300F89825 /* SesacSwiftUIApp.swift */; };
 		6BAFCA4B2C857C9300F89825 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFCA4A2C857C9300F89825 /* ContentView.swift */; };
 		6BAFCA4D2C857C9400F89825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BAFCA4C2C857C9400F89825 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		6B9D120B2C86F45C00FF6A73 /* CoinMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketView.swift; sourceTree = "<group>"; };
 		6B9D120D2C86F76600FF6A73 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		6B9D12112C86FD2300FF6A73 /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
+		6B9D123D2C884AAD00FF6A73 /* RandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageView.swift; sourceTree = "<group>"; };
 		6BAFCA452C857C9300F89825 /* SesacSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAFCA482C857C9300F89825 /* SesacSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesacSwiftUIApp.swift; sourceTree = "<group>"; };
 		6BAFCA4A2C857C9300F89825 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				6B9D120F2C86F76A00FF6A73 /* Model */,
 				6BAFCA482C857C9300F89825 /* SesacSwiftUIApp.swift */,
 				6BAFCA4A2C857C9300F89825 /* ContentView.swift */,
+				6B9D123D2C884AAD00FF6A73 /* RandomImageView.swift */,
 				6BAFCA562C857E5000F89825 /* ProfileView.swift */,
 				6B9D120B2C86F45C00FF6A73 /* CoinMarketView.swift */,
 				6B9D12102C86FD1500FF6A73 /* Network */,
@@ -175,6 +178,7 @@
 				6B9D120C2C86F45C00FF6A73 /* CoinMarketView.swift in Sources */,
 				6B9D12122C86FD2300FF6A73 /* UpbitAPI.swift in Sources */,
 				6B9D120E2C86F76600FF6A73 /* Market.swift in Sources */,
+				6B9D123E2C884AAD00FF6A73 /* RandomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
